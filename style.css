@@ -121,3 +121,31 @@ ul li span:hover {
     background-color: #dec1de;
     opacity: 1;
 }
+
+/* ... Your existing CSS code ... */
+
+ul li {
+    position: relative;
+    /* Add this line to ensure relative positioning */
+    list-style: none;
+    font-size: 17px;
+    padding: 18px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+}
+
+ul li span {
+    position: absolute;
+    top: 5px;
+    font-size: 22px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+ul li span.edit {
+    right: 45px;
+}
+
+ul li span.delete {
+    right: 5px;
+}
