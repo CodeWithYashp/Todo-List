@@ -164,6 +164,7 @@ footer {
         padding: 12px 10px;
     }
 
+
     .container {
         padding: 0px 20px;
         height: 100%;
@@ -176,26 +177,28 @@ footer {
     .todoApp h2 {
         justify-content: center;
         margin-bottom: 20px;
-        /* Reduced margin for better mobile display */
     }
 
     .row {
         padding-left: 0px;
         flex-direction: column;
-        /* Stack input and button vertically on small screens */
         align-items: center;
     }
 
     input {
         padding: 16px 30px;
         margin-bottom: 10px;
-        /* Added margin to separate input and button */
     }
 
     ul li {
         padding: 18px 8px 12px 15px;
-        /* Adjusted padding for better mobile display */
     }
+
+    #task-container li {
+        
+        padding-left: 49px;
+    }
+
 
     footer {
         background: transparent;
@@ -205,8 +208,6 @@ footer {
 
     footer p {
         margin-left: 0;
-        /* Reset margin for mobile display */
         margin-top: 5px;
-        /* Added margin to separate text from the edge */
     }
 }
