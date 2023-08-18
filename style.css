@@ -8,14 +8,17 @@
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
 }
 
-.container {
+html {
+    height: 100%;
+}
 
+.container {
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     background: linear-gradient(to right, #654ea3, #eaafc8);
     padding: 10px;
     flex: 1;
@@ -26,12 +29,10 @@ body {
 .todoApp {
     width: 100%;
     max-width: 540px;
-    margin: 100%;
-    background: #fff;
     margin: 100px auto 20px;
+    background: #fff;
     padding: 40px;
     border-radius: 10px;
-
 }
 
 .todoApp h2 {
@@ -50,19 +51,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #f8f0f4;
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
+    position: relative;
 }
 
 input {
-    flex: 1;
     border: none;
     outline: none;
-    background: transparent;
-    padding: 10px;
+    background: #f8f0f4;
     font-weight: 14px;
+    border-radius: 30px;
+    padding: 16px 50px;
+    width: 100%;
 }
 
 button {
@@ -76,21 +78,21 @@ button {
     color: white;
     opacity: 0.7;
     transition: 0.3s;
+    position: absolute;
+    right: 0;
 }
 
 button:hover {
     opacity: 1;
 }
 
-
 ul li {
-
+    position: relative;
     list-style: none;
     font-size: 17px;
     padding: 18px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
-    position: relative;
 }
 
 ul li::before {
@@ -117,36 +119,6 @@ ul li.checked::before {
 
 ul li span {
     position: absolute;
-    right: 0;
-    top: 5px;
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
-    line-height: 40px;
-    text-align: center;
-    /* color: #555; */
-    border-radius: 50%;
-    opacity: 0.6;
-    transition: 0.3s;
-}
-
-ul li span:hover {
-    background-color: #dec1de;
-    opacity: 1;
-}
-
-
-ul li {
-    position: relative;
-    list-style: none;
-    font-size: 17px;
-    padding: 18px 8px 12px 50px;
-    user-select: none;
-    cursor: pointer;
-}
-
-ul li span {
-    position: absolute;
     top: 5px;
     font-size: 22px;
     line-height: 40px;
@@ -164,7 +136,6 @@ ul li span.delete {
 footer {
     text-align: center;
     padding: 10px;
-    background: linear-gradient(to right, #654ea3, #eaafc8);
     color: #fff;
     position: absolute;
     bottom: 5%;
@@ -176,4 +147,62 @@ footer {
 #task-container {
     overflow-y: auto;
     max-height: 250px;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+
+    button {
+        position: initial;
+        width: 35%;
+        margin: auto;
+        margin-top: 10px;
+        display: block;
+        padding: 12px 10px;
+    }
+
+    .container {
+        padding: 0px 20px;
+        height: 100%;
+    }
+
+    .todoApp {
+        margin: 50px auto 20px;
+    }
+
+    .todoApp h2 {
+        justify-content: center;
+        margin-bottom: 20px;
+        /* Reduced margin for better mobile display */
+    }
+
+    .row {
+        padding-left: 0px;
+        flex-direction: column;
+        /* Stack input and button vertically on small screens */
+        align-items: center;
+    }
+
+    input {
+        padding: 16px 30px;
+        margin-bottom: 10px;
+        /* Added margin to separate input and button */
+    }
+
+    ul li {
+        padding: 18px 8px 12px 15px;
+        /* Adjusted padding for better mobile display */
+    }
+
+    footer {
+        background: transparent;
+        width: 100%;
+        text-align: center;
+    }
+
+    footer p {
+        margin-left: 0;
+        /* Reset margin for mobile display */
+        margin-top: 5px;
+        /* Added margin to separate text from the edge */
+    }
 }
