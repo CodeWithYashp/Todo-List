@@ -95,6 +95,10 @@ ul li {
     cursor: pointer;
 }
 
+ul li span.task-text {
+    margin-left: 10px;
+}
+
 ul li::before {
     content: '';
     position: absolute;

@@ -17,7 +17,7 @@ function addTask() {
     let li = document.createElement("li");
     li.innerHTML =
       textBox.value +
-      '<span class="edit">\u270E</span><span class="delete">\u274C</span>';
+      '<span class="edit task-text">\u270E</span><span class="delete">\u274C</span>';
     taskContainer.appendChild(li);
     textBox.value = "";
     saveData();
