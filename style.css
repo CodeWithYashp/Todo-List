@@ -19,6 +19,8 @@ body {
     background: linear-gradient(to right, #654ea3, #eaafc8);
     padding: 10px;
     flex: 1;
+    overflow: hidden;
+    position: relative;
 }
 
 .todoApp {
@@ -29,6 +31,7 @@ body {
     margin: 100px auto 20px;
     padding: 40px;
     border-radius: 10px;
+
 }
 
 .todoApp h2 {
@@ -163,4 +166,17 @@ footer {
     padding: 10px;
     background: linear-gradient(to right, #654ea3, #eaafc8);
     color: #fff;
+    position: absolute;
+    bottom: 5%;
+    margin: auto;
+    display: block;
+    width: 100%;
 }
+
+#task-container {
+    overflow-y: auto;
+    max-height: 250px;
+}
+
+
+/* yha chhoda tha */
